@@ -18,9 +18,9 @@ double distanceFallen(double towerHeight, double seconds)
 void printHeight(double towerHeight, double seconds, double distanceFallen)
 {
 	if (towerHeight - distanceFallen <= 0)
-		std::cout << "At " << seconds << " seconds, the object is on the ground.\n";
+		std::cout << "At " << seconds << " second(s), the object is on the ground.\n";
 	else
-		std::cout << "At " << seconds << " seconds, the object is at height: " <<
+		std::cout << "At " << seconds << " second(s), the object is at height: " <<
 		             (towerHeight - distanceFallen) << " meters.\n";
 
 }
