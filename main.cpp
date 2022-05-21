@@ -18,7 +18,9 @@ int main()
 	printHeight(towerHeight, 4, distanceFallen(towerHeight, 4));
 	printHeight(towerHeight, 5, distanceFallen(towerHeight, 5));
 
+	// stops the program from closing automatically after printing
 	system("pause");
+	std::cout << " ";
 
 	return 0;
 }
