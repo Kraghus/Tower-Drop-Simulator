@@ -1,8 +1,4 @@
-#include <iostream>
-
-double getTowerHeight();
-double distanceFallen(double towerHeight, double seconds);
-void printHeight(double towerHeight, double seconds, double distanceFallen);
+#include "io.h"
 
 int main()
 {

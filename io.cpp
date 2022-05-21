@@ -1,3 +1,4 @@
+#include "io.h"
 #include <iostream>
 
 double getTowerHeight()
