@@ -6,10 +6,10 @@
 
 int main()
 {
-	// calls function to ask user for the initial tower height
+	// calls function to ask the user for the initial tower height
 	const double towerHeight{ getTowerHeight() };
 
-	// calls functions to print height of the object at 0 through 5 seconds	
+	// calls functions to print the height of the object at 0 through 5 seconds	
 	printHeight(towerHeight, 0, distanceFallen(towerHeight, 0));
 	printHeight(towerHeight, 1, distanceFallen(towerHeight, 1));
 	printHeight(towerHeight, 2, distanceFallen(towerHeight, 2));
@@ -19,6 +19,3 @@ int main()
 
 	return 0;
 }
-
-// gravity = 9.8m/(s^2)
-// distance fallen = gravity * ((x_seconds)^2)/2
