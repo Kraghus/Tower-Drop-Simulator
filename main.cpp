@@ -2,6 +2,7 @@
 // the height of an object dropped from that tower. It then prints
 // what the height would be at 0 through 5 seconds after being dropped.
 
+#include <iostream>
 #include "io.h"
 
 int main()
@@ -16,6 +17,8 @@ int main()
 	printHeight(towerHeight, 3, distanceFallen(towerHeight, 3));
 	printHeight(towerHeight, 4, distanceFallen(towerHeight, 4));
 	printHeight(towerHeight, 5, distanceFallen(towerHeight, 5));
+
+	system("pause");
 
 	return 0;
 }
