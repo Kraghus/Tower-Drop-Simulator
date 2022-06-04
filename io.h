@@ -5,7 +5,7 @@
 #define IO_H
 
 double getTowerHeight();
-double distanceFallen(double towerHeight, double seconds);
-void printHeight(double towerHeight, double seconds, double distanceFallen);
+//double distanceFallen(double towerHeight, double seconds);
+void printHeight(double towerHeight);
 
 #endif

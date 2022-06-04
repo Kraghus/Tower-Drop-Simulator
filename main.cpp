@@ -1,22 +1,17 @@
 // This program gets the height of a tower from the user and calculates
 // the height of an object dropped from that tower. It then prints
-// what the height would be at 0 through 5 seconds after being dropped.
+// what the height would be for every second until it reaches the ground.
 
 #include <iostream>
 #include "io.h"
 
 int main()
 {
-	// calls function to ask the user for the initial tower height
-	const double towerHeight{ getTowerHeight() };
+	// calls a function to ask the user for the initial tower height
+	double towerHeight{ getTowerHeight() };
 
-	// calls functions to print the height of the object at 0 through 5 seconds	
-	printHeight(towerHeight, 0, distanceFallen(towerHeight, 0));
-	printHeight(towerHeight, 1, distanceFallen(towerHeight, 1));
-	printHeight(towerHeight, 2, distanceFallen(towerHeight, 2));
-	printHeight(towerHeight, 3, distanceFallen(towerHeight, 3));
-	printHeight(towerHeight, 4, distanceFallen(towerHeight, 4));
-	printHeight(towerHeight, 5, distanceFallen(towerHeight, 5));
+	// calls a function to print the height of the object until it reaches the ground
+	printHeight(towerHeight);
 
 	// stops the program from closing automatically after printing
 	system("pause");

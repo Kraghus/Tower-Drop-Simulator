@@ -10,27 +10,30 @@ double getTowerHeight()
 	return towerHeight;
 }
 
-// takes in user input (towerHeight) and seconds to calculate how far the object has fallen
-// the gravity constant being used is 9.8m/s^2
-// the calculation for distance fallen is gravity * ((x_seconds)^2)/2
-double distanceFallen(double towerHeight, double seconds)
-{
-	constexpr double gravity{ 9.8 };
-	double distanceFallen{ (gravity * (seconds * seconds) / 2) };
-	return distanceFallen;
-}
-
-// takes in the distance fallen and subtracts it from the user input (towerHeight) to
+// calculates distance fallen and subtracts it from the user input (towerHeight) to
 // calculate the height of the object at the given second
 // checks to see if the ball has fallen the entire distance of the tower, and if so,
 // prints that it's on the ground
 // if the object is not on the ground, prints what the height is at the given second
-void printHeight(double towerHeight, double seconds, double distanceFallen)
+void printHeight(double towerHeight)
 {
-	if (towerHeight - distanceFallen <= 0)
-		std::cout << "At " << seconds << " second(s), the object is on the ground.\n";
-	else
-		std::cout << "At " << seconds << " second(s), the object is at height: " <<
-		(towerHeight - distanceFallen) << " meters.\n";
+	double distanceFallen{};
+		for (int seconds{}; ; ++seconds)
+	{
+		// calculates distance fallen with gravity constant
+		constexpr double gravity{ 9.8 };
+		double distanceFallen{ (gravity * (seconds * seconds) / 2) };
+
+		if (towerHeight - distanceFallen <= 0)
+		{
+			std::cout << "At " << seconds << " second(s), the object is on the ground.\n";
+			break;
+		}
+		else
+		{
+			std::cout << "At " << seconds << " second(s), the object is at height: " <<
+				(towerHeight - distanceFallen) << " meters.\n";
+		}
+	}
 
 }
