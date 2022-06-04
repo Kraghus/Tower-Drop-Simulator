@@ -14,7 +14,7 @@ double getTowerHeight()
 // calculate the height of the object at the given second
 // checks to see if the ball has fallen the entire distance of the tower, and if so,
 // prints that it's on the ground
-// if the object is not on the ground, prints what the height is at the given second
+// if the object is not on the ground, prints what height it's at for each second
 void printHeight(double towerHeight)
 {
 	double distanceFallen{};

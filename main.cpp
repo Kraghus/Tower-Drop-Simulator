@@ -10,7 +10,7 @@ int main()
 	// calls a function to ask the user for the initial tower height
 	double towerHeight{ getTowerHeight() };
 
-	// calls a function to print the height of the object until it reaches the ground
+	// calls a loop function to print the height of the object until it reaches the ground
 	printHeight(towerHeight);
 
 	// stops the program from closing automatically after printing
